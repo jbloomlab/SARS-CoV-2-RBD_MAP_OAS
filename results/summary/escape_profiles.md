@@ -676,11 +676,12 @@ def draw_profile(tup):
         - pdffile: name of created PDF
         - pngfile: name of created PNG
         - svgfile: name of created SVG
+        - hide_wt_identity: if True, hide wt identity to allow plotting of multiple libraries
         
     Returns 2-tuple `(pdffile, pngfile)`
     """
     (df, site_metric, show_color, draw_line_plot, mut_metric, color, dmslogo_facet_plot_kwargs,
-     dmslogo_draw_logo_kwargs, dmslogo_draw_line_kwargs, pdffile, pngfile, svgfile) = tup
+     dmslogo_draw_logo_kwargs, dmslogo_draw_line_kwargs, pdffile, pngfile, svgfile, hide_wt_identity) = tup
     fig, ax = dmslogo.facet_plot(
             data=df,
             x_col='site',
@@ -699,7 +700,7 @@ def draw_profile(tup):
                                    'letter_col': 'mutation',
                                    'ylabel': 'escape fraction',
                                    'color_col': color,
-                                   'xtick_col': 'wt_site',
+                                   'xtick_col': 'site' if hide_wt_identity else 'wt_site',
                                    'xlabel': 'site',
                                    'shade_color_col': 'shade_color' if 'shade_color' in df.columns else None,
                                    'shade_alpha_col': 'shade_alpha' if 'shade_alpha' in df.columns else None
@@ -892,7 +893,8 @@ for name, specs in escape_profiles_config.items():
                 dmslogo_facet_plot_kwargs,
                 specs['dmslogo_draw_logo_kwargs'] if 'dmslogo_draw_logo_kwargs' in specs else {},
                 specs['dmslogo_draw_line_kwargs'] if 'dmslogo_draw_line_kwargs' in specs else {},
-                pdffile, pngfile, svgfile
+                pdffile, pngfile, svgfile,
+                specs['hide_wt_identity'] if 'hide_wt_identity' in specs else False,
                 ))
 ```
 
@@ -914,11 +916,11 @@ with multiprocessing.Pool(ncpus) as pool:
         
 ```
 
-    Drawing 3 profiles using 16 CPUs...
+    Drawing 9 profiles using 16 CPUs...
     
     Plotted profile 1 to:
-     results/escape_profiles/WOO_BA1_FLAG_stackedlogo.pdf
-     results/escape_profiles/WOO_BA1_FLAG_stackedlogo.png.
+     results/escape_profiles/WOO-3_all_stackedlogo.pdf
+     results/escape_profiles/WOO-3_all_stackedlogo.png.
 
 
 
@@ -929,8 +931,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 2 to:
-     results/escape_profiles/WOO_BA1_Strep_stackedlogo.pdf
-     results/escape_profiles/WOO_BA1_Strep_stackedlogo.png.
+     results/escape_profiles/WOO-4_all_stackedlogo.pdf
+     results/escape_profiles/WOO-4_all_stackedlogo.png.
 
 
 
@@ -941,13 +943,85 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 3 to:
+     results/escape_profiles/WOO-5_all_stackedlogo.pdf
+     results/escape_profiles/WOO-5_all_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_29_5.png)
+    
+
+
+    
+    Plotted profile 4 to:
+     results/escape_profiles/WOO-6_all_stackedlogo.pdf
+     results/escape_profiles/WOO-6_all_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_29_7.png)
+    
+
+
+    
+    Plotted profile 5 to:
+     results/escape_profiles/WOO_BA1_FLAG_stackedlogo.pdf
+     results/escape_profiles/WOO_BA1_FLAG_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_29_9.png)
+    
+
+
+    
+    Plotted profile 6 to:
+     results/escape_profiles/WOO_BA1_Strep_stackedlogo.pdf
+     results/escape_profiles/WOO_BA1_Strep_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_29_11.png)
+    
+
+
+    
+    Plotted profile 7 to:
      results/escape_profiles/Wuhan1_Strep_stackedlogo.pdf
      results/escape_profiles/Wuhan1_Strep_stackedlogo.png.
 
 
 
     
-![png](escape_profiles_files/escape_profiles_29_5.png)
+![png](escape_profiles_files/escape_profiles_29_13.png)
+    
+
+
+    
+    Plotted profile 8 to:
+     results/escape_profiles/WWW_Wuhan1_Strep_stackedlogo.pdf
+     results/escape_profiles/WWW_Wuhan1_Strep_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_29_15.png)
+    
+
+
+    
+    Plotted profile 9 to:
+     results/escape_profiles/all_stackedlogo.pdf
+     results/escape_profiles/all_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_29_17.png)
     
 
 

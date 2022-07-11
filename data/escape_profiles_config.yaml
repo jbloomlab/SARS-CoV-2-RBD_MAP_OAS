@@ -31,6 +31,96 @@
 #   dmslogo_facet_plot_kwargs -> any keyword arguments to dmslogo.facet_plot
 #   dmslogo_draw_logo_kwargs -> any keyword arguments to dmslogo.draw_logo
 #   dmslogo_draw_line_kwargs -> any keyword arguments to dmslogo.draw_line
+#   hide_wt_identity -> if True, hides wt identity to allow plotting of multiple
+#                   libraries (with different wt sequences) on single axis
+
+WOO-3_all:
+  conditions:
+    WOO-3_Wuhan-Hu-1_Strep: WOO-3_Wuhan-Hu-1_Strep
+    WOO-3_BA.1_Strep: WOO-3_BA.1_Strep
+    WOO-3_BA.1_FLAG: WOO-3_BA.1_FLAG
+  plot_auto_identified_sites: sensitive_max_mut
+  #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  add_sites: []
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: False
+  make_supp_data: False
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  hide_wt_identity: True
+
+WOO-4_all:
+  conditions:
+    WOO-4_Wuhan-Hu-1_Strep: WOO-4_Wuhan-Hu-1_Strep
+    WOO-4_BA.1_Strep: WOO-4_BA.1_Strep
+    WOO-4_BA.1_FLAG: WOO-4_BA.1_FLAG
+  plot_auto_identified_sites: sensitive_max_mut
+  #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  add_sites: []
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: False
+  make_supp_data: False
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  hide_wt_identity: True
+
+WOO-5_all:
+  conditions:
+    WOO-5_Wuhan-Hu-1_Strep: WOO-5_Wuhan-Hu-1_Strep
+    WOO-5_BA.1_Strep: WOO-5_BA.1_Strep
+    WOO-5_BA.1_FLAG: WOO-5_BA.1_FLAG
+  plot_auto_identified_sites: sensitive_max_mut
+  #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  add_sites: []
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: False
+  make_supp_data: False
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  hide_wt_identity: True
+
+WOO-6_all:
+  conditions:
+    WOO-6_Wuhan-Hu-1_Strep: WOO-6_Wuhan-Hu-1_Strep
+    WOO-6_BA.1_Strep: WOO-6_BA.1_Strep
+    WOO-6_BA.1_FLAG: WOO-6_BA.1_FLAG
+  plot_auto_identified_sites: sensitive_max_mut
+  #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  add_sites: []
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: False
+  make_supp_data: False
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  hide_wt_identity: True
 
 WOO_BA1_FLAG:
   conditions:
@@ -44,7 +134,7 @@ WOO_BA1_FLAG:
   exclude_sites: [336, 361]
   site_color_scheme: barnes_serum_epitopes
   color_by_dms: False
-  make_supp_data: True
+  make_supp_data: False
   dmslogo_facet_plot_kwargs:
     height_per_ax: 2.0
   dmslogo_draw_line_kwargs:
@@ -99,3 +189,56 @@ Wuhan1_Strep:
   dmslogo_draw_logo_kwargs:
     widthscale: 0.75
     axisfontscale: 1.5
+
+WWW_Wuhan1_Strep:
+  conditions:
+    WWW-1_Wuhan-Hu-1_Strep: WWW-1_Wuhan-Hu-1_Strep
+    WWW-2_Wuhan-Hu-1_Strep: WWW-2_Wuhan-Hu-1_Strep
+  plot_auto_identified_sites: sensitive_max_mut
+  #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  add_sites: []
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: False
+  make_supp_data: False
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+
+all:
+  conditions:
+    WWW-1_Wuhan-Hu-1_Strep: WWW-1_Wuhan-Hu-1_Strep
+    WWW-2_Wuhan-Hu-1_Strep: WWW-2_Wuhan-Hu-1_Strep
+    WOO-3_Wuhan-Hu-1_Strep: WOO-3_Wuhan-Hu-1_Strep
+    WOO-3_BA.1_Strep: WOO-3_BA.1_Strep
+    WOO-3_BA.1_FLAG: WOO-3_BA.1_FLAG
+    WOO-4_Wuhan-Hu-1_Strep: WOO-4_Wuhan-Hu-1_Strep
+    WOO-4_BA.1_Strep: WOO-4_BA.1_Strep
+    WOO-4_BA.1_FLAG: WOO-4_BA.1_FLAG
+    WOO-5_Wuhan-Hu-1_Strep: WOO-5_Wuhan-Hu-1_Strep
+    WOO-5_BA.1_Strep: WOO-5_BA.1_Strep
+    WOO-5_BA.1_FLAG: WOO-5_BA.1_FLAG
+    WOO-6_Wuhan-Hu-1_Strep: WOO-6_Wuhan-Hu-1_Strep
+    WOO-6_BA.1_Strep: WOO-6_BA.1_Strep
+    WOO-6_BA.1_FLAG: WOO-6_BA.1_FLAG
+  plot_auto_identified_sites: sensitive_max_mut
+  #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  add_sites: []
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: False
+  make_supp_data: True
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  hide_wt_identity: True
