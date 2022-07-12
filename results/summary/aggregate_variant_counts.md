@@ -46,7 +46,7 @@ Versions of key software:
 print(f"Using dms_variants version {dms_variants.__version__}")
 ```
 
-    Using dms_variants version 0.8.10
+    Using dms_variants version 1.4.0
 
 
 Ignore warnings that clutter output:
@@ -1218,7 +1218,7 @@ barcode_fate_plot = (
     geom_bar(stat='identity') +
     facet_wrap('~ sample + library', ncol=ncol) +
     scale_fill_manual(CBPALETTE, guide=False) +
-    theme(figure_size=(3.25 * ncol, 2 * math.ceil(nfacets / ncol)),
+    theme(figure_size=(3.25 * ncol, 2.5 * math.ceil(nfacets / ncol)),
           axis_text_x=element_text(angle=90),
           panel_grid_major_x=element_blank()
           ) +
