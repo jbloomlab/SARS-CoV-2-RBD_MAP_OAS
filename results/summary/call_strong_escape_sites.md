@@ -16,9 +16,16 @@ import pandas as pd
 from plotnine import *
 
 import yaml
+
+import warnings
 ```
 
-Versions of key software:
+Ignore warnings that clutter output:
+
+
+```python
+warnings.simplefilter('ignore')
+```
 
 Read the configuration file:
 
@@ -233,11 +240,6 @@ site_threshold_df = (
     Sites are also called as significant if they have **any** mutation with escape fraction > 0.5
 
 
-    /loc/scratch/62089215/ipykernel_24634/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-    /loc/scratch/62089215/ipykernel_24634/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-    /loc/scratch/62089215/ipykernel_24634/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-
-
 Now plot the selection for all sites for all conditions, indicating which sites are strong escape and using lines to draw the three thresholds:
 
 
@@ -286,7 +288,7 @@ _ = p.draw()
 
 
     
-![png](call_strong_escape_sites_files/call_strong_escape_sites_15_0.png)
+![png](call_strong_escape_sites_files/call_strong_escape_sites_16_0.png)
     
 
 
@@ -492,7 +494,7 @@ _ = p.draw()
 
 
     
-![png](call_strong_escape_sites_files/call_strong_escape_sites_19_0.png)
+![png](call_strong_escape_sites_files/call_strong_escape_sites_20_0.png)
     
 
 

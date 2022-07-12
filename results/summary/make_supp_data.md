@@ -68,8 +68,6 @@ print('Making supplementary data for the following condition sets:\n  ' + '\n  '
 ```
 
     Making supplementary data for the following condition sets:
-      WOO_BA1_Strep
-      Wuhan1_Strep
       all
 
 
@@ -206,7 +204,7 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
 ```
 
     
-    Plotting correlations of mutation escape for WOO_BA1_Strep
+    Plotting correlations of mutation escape for all
 
 
 
@@ -215,58 +213,14 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
     
 
 
-    Saving plot to results/supp_data/WOO_BA1_Strep-mutation-corr.pdf
-    
-    Plotting correlations of mutation escape for Wuhan1_Strep
-
-
-
-    
-![png](make_supp_data_files/make_supp_data_16_3.png)
-    
-
-
-    Saving plot to results/supp_data/Wuhan1_Strep-mutation-corr.pdf
-    
-    Plotting correlations of mutation escape for all
-
-
-
-    
-![png](make_supp_data_files/make_supp_data_16_5.png)
-    
-
-
     Saving plot to results/supp_data/all-mutation-corr.pdf
-    
-    Plotting correlations of site escape for WOO_BA1_Strep
-
-
-
-    
-![png](make_supp_data_files/make_supp_data_16_7.png)
-    
-
-
-    Saving plot to results/supp_data/WOO_BA1_Strep-site-corr.pdf
-    
-    Plotting correlations of site escape for Wuhan1_Strep
-
-
-
-    
-![png](make_supp_data_files/make_supp_data_16_9.png)
-    
-
-
-    Saving plot to results/supp_data/Wuhan1_Strep-site-corr.pdf
     
     Plotting correlations of site escape for all
 
 
 
     
-![png](make_supp_data_files/make_supp_data_16_11.png)
+![png](make_supp_data_files/make_supp_data_16_3.png)
     
 
 
@@ -314,12 +268,6 @@ for set_name, condition_set in condition_sets.items():
     df.to_csv(csv_file, index=False, float_format='%.4g')
 ```
 
-    
-    Raw data for WOO_BA1_Strep:
-    Writing to results/supp_data/WOO_BA1_Strep_raw_data.csv
-    
-    Raw data for Wuhan1_Strep:
-    Writing to results/supp_data/Wuhan1_Strep_raw_data.csv
     
     Raw data for all:
     Writing to results/supp_data/all_raw_data.csv
@@ -588,8 +536,6 @@ for set_name, condition_set in condition_sets.items():
         df.to_csv(csv_file, index=False, float_format='%.4g')
 ```
 
-    Writing `dms-view` input file for WOO_BA1_Strep mapped to PDB 6m0j to results/supp_data/WOO_BA1_Strep_6m0j_dms-view_data.csv
-    Writing `dms-view` input file for Wuhan1_Strep mapped to PDB 6m0j to results/supp_data/Wuhan1_Strep_6m0j_dms-view_data.csv
     Writing `dms-view` input file for all mapped to PDB 6m0j to results/supp_data/all_6m0j_dms-view_data.csv
 
 

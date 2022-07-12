@@ -48,7 +48,7 @@ Versions of key software:
 print(f"Using dms_variants version {dms_variants.__version__}")
 ```
 
-    Using dms_variants version 0.8.10
+    Using dms_variants version 1.4.0
 
 
 Ignore warnings that clutter output:

@@ -82,7 +82,6 @@ rule make_summary:
         escape_profiles=nb_markdown('escape_profiles.ipynb'),
         output_pdbs=nb_markdown('output_pdbs.ipynb'),
         make_supp_data=nb_markdown('make_supp_data.ipynb'),
-        # lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
     output:
         summary = os.path.join(config['summary_dir'], 'summary.md')
     run:
@@ -142,19 +141,6 @@ rule make_rulegraph:
         os.path.join(config['summary_dir'], 'rulegraph.svg')
     shell:
         "snakemake --forceall --rulegraph | dot -Tsvg > {output}"
-
-rule lineplots_by_group:
-    input:
-        config['escape_fracs'],
-        "data/pdbs/6M0J.pdb",
-    output:
-        nb_markdown=nb_markdown('lineplots_by_group.ipynb'),
-        outdir=directory(config['lineplots_by_group_dir']),
-    params:
-        nb='lineplots_by_group.ipynb'
-    shell:
-        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
-
 
 rule make_supp_data:
     input:

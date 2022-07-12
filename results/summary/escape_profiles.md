@@ -8,6 +8,7 @@ Import Python modules:
 ```python
 import multiprocessing
 import os
+import warnings
 
 import Bio.SeqIO
 
@@ -45,8 +46,15 @@ print(f"Using `dms_variants` version {dms_variants.__version__}")
 ```
 
     Using `dmslogo` version 0.6.2
-    Using `dms_variants` version 0.8.10
+    Using `dms_variants` version 1.4.0
 
+
+Ignore warnings that clutter output:
+
+
+```python
+warnings.simplefilter('ignore')
+```
 
 Read the configuration file:
 
@@ -220,30 +228,13 @@ escape_fracs = (escape_fracs
 
 
 ```python
-escape_fracs.head()
+display(HTML(escape_fracs.head().to_html(index=False)))
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>condition</th>
       <th>site</th>
       <th>wildtype</th>
@@ -261,7 +252,6 @@ escape_fracs.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>WOO-3_BA.1_FLAG</td>
       <td>331</td>
       <td>N</td>
@@ -277,7 +267,6 @@ escape_fracs.head()
       <td>WOO-3</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>WOO-3_BA.1_FLAG</td>
       <td>331</td>
       <td>N</td>
@@ -293,7 +282,6 @@ escape_fracs.head()
       <td>WOO-3</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>WOO-3_BA.1_FLAG</td>
       <td>331</td>
       <td>N</td>
@@ -309,7 +297,6 @@ escape_fracs.head()
       <td>WOO-3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>WOO-3_BA.1_FLAG</td>
       <td>331</td>
       <td>N</td>
@@ -325,7 +312,6 @@ escape_fracs.head()
       <td>WOO-3</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>WOO-3_BA.1_FLAG</td>
       <td>331</td>
       <td>N</td>
@@ -342,8 +328,6 @@ escape_fracs.head()
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 
@@ -388,30 +372,13 @@ for target, file in config['wildtype_sequence'].items():
 
 
 ```python
-escape_fracs_padded.head()
+display(HTML(escape_fracs_padded.head().to_html(index=False)))
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>condition</th>
       <th>target</th>
       <th>secondary</th>
@@ -426,7 +393,6 @@ escape_fracs_padded.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>WOO-3_Wuhan-Hu-1_Strep</td>
       <td>Wuhan-Hu-1</td>
       <td>Strep</td>
@@ -439,7 +405,6 @@ escape_fracs_padded.head()
       <td>N331</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>WOO-3_Wuhan-Hu-1_Strep</td>
       <td>Wuhan-Hu-1</td>
       <td>Strep</td>
@@ -452,7 +417,6 @@ escape_fracs_padded.head()
       <td>N331</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>WOO-3_Wuhan-Hu-1_Strep</td>
       <td>Wuhan-Hu-1</td>
       <td>Strep</td>
@@ -465,7 +429,6 @@ escape_fracs_padded.head()
       <td>N331</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>WOO-3_Wuhan-Hu-1_Strep</td>
       <td>Wuhan-Hu-1</td>
       <td>Strep</td>
@@ -478,7 +441,6 @@ escape_fracs_padded.head()
       <td>N331</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>WOO-3_Wuhan-Hu-1_Strep</td>
       <td>Wuhan-Hu-1</td>
       <td>Strep</td>
@@ -492,8 +454,6 @@ escape_fracs_padded.head()
     </tr>
   </tbody>
 </table>
-</div>
-
 
 
 ## Color by deep mutational scanning data
@@ -602,7 +562,7 @@ if len(nan_color):
 
 
     
-![png](escape_profiles_files/escape_profiles_21_1.png)
+![png](escape_profiles_files/escape_profiles_23_1.png)
     
 
 
@@ -612,7 +572,7 @@ if len(nan_color):
 
 
     
-![png](escape_profiles_files/escape_profiles_21_3.png)
+![png](escape_profiles_files/escape_profiles_23_3.png)
     
 
 
@@ -623,7 +583,7 @@ if len(nan_color):
 
 
     
-![png](escape_profiles_files/escape_profiles_21_5.png)
+![png](escape_profiles_files/escape_profiles_23_5.png)
     
 
 
@@ -633,7 +593,7 @@ if len(nan_color):
 
 
     
-![png](escape_profiles_files/escape_profiles_21_7.png)
+![png](escape_profiles_files/escape_profiles_23_7.png)
     
 
 
@@ -916,7 +876,7 @@ with multiprocessing.Pool(ncpus) as pool:
         
 ```
 
-    Drawing 9 profiles using 16 CPUs...
+    Drawing 7 profiles using 16 CPUs...
     
     Plotted profile 1 to:
      results/escape_profiles/WOO-3_all_stackedlogo.pdf
@@ -925,7 +885,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_29_1.png)
+![png](escape_profiles_files/escape_profiles_31_1.png)
     
 
 
@@ -937,7 +897,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_29_3.png)
+![png](escape_profiles_files/escape_profiles_31_3.png)
     
 
 
@@ -949,7 +909,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_29_5.png)
+![png](escape_profiles_files/escape_profiles_31_5.png)
     
 
 
@@ -961,67 +921,43 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_29_7.png)
+![png](escape_profiles_files/escape_profiles_31_7.png)
     
 
 
     
     Plotted profile 5 to:
-     results/escape_profiles/WOO_BA1_FLAG_stackedlogo.pdf
-     results/escape_profiles/WOO_BA1_FLAG_stackedlogo.png.
+     results/escape_profiles/WOO-5_BA1_stackedlogo.pdf
+     results/escape_profiles/WOO-5_BA1_stackedlogo.png.
 
 
 
     
-![png](escape_profiles_files/escape_profiles_29_9.png)
+![png](escape_profiles_files/escape_profiles_31_9.png)
     
 
 
     
     Plotted profile 6 to:
-     results/escape_profiles/WOO_BA1_Strep_stackedlogo.pdf
-     results/escape_profiles/WOO_BA1_Strep_stackedlogo.png.
+     results/escape_profiles/WOO-6_BA1_stackedlogo.pdf
+     results/escape_profiles/WOO-6_BA1_stackedlogo.png.
 
 
 
     
-![png](escape_profiles_files/escape_profiles_29_11.png)
+![png](escape_profiles_files/escape_profiles_31_11.png)
     
 
 
     
     Plotted profile 7 to:
-     results/escape_profiles/Wuhan1_Strep_stackedlogo.pdf
-     results/escape_profiles/Wuhan1_Strep_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_29_13.png)
-    
-
-
-    
-    Plotted profile 8 to:
-     results/escape_profiles/WWW_Wuhan1_Strep_stackedlogo.pdf
-     results/escape_profiles/WWW_Wuhan1_Strep_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_29_15.png)
-    
-
-
-    
-    Plotted profile 9 to:
      results/escape_profiles/all_stackedlogo.pdf
      results/escape_profiles/all_stackedlogo.png.
 
 
 
     
-![png](escape_profiles_files/escape_profiles_29_17.png)
+![png](escape_profiles_files/escape_profiles_31_13.png)
     
 
 

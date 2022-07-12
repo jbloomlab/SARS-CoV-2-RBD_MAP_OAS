@@ -39,11 +39,11 @@ WOO-3_all:
     WOO-3_Wuhan-Hu-1_Strep: WOO-3_Wuhan-Hu-1_Strep
     WOO-3_BA.1_Strep: WOO-3_BA.1_Strep
     WOO-3_BA.1_FLAG: WOO-3_BA.1_FLAG
-  plot_auto_identified_sites: sensitive_max_mut
+  plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
   exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
+  site_color_scheme: BA1_mutated
   color_by_dms: False
   make_supp_data: False
   dmslogo_facet_plot_kwargs:
@@ -61,11 +61,11 @@ WOO-4_all:
     WOO-4_Wuhan-Hu-1_Strep: WOO-4_Wuhan-Hu-1_Strep
     WOO-4_BA.1_Strep: WOO-4_BA.1_Strep
     WOO-4_BA.1_FLAG: WOO-4_BA.1_FLAG
-  plot_auto_identified_sites: sensitive_max_mut
+  plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
   exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
+  site_color_scheme: BA1_mutated
   color_by_dms: False
   make_supp_data: False
   dmslogo_facet_plot_kwargs:
@@ -83,11 +83,11 @@ WOO-5_all:
     WOO-5_Wuhan-Hu-1_Strep: WOO-5_Wuhan-Hu-1_Strep
     WOO-5_BA.1_Strep: WOO-5_BA.1_Strep
     WOO-5_BA.1_FLAG: WOO-5_BA.1_FLAG
-  plot_auto_identified_sites: sensitive_max_mut
+  plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
   exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
+  site_color_scheme: BA1_mutated
   color_by_dms: False
   make_supp_data: False
   dmslogo_facet_plot_kwargs:
@@ -105,11 +105,11 @@ WOO-6_all:
     WOO-6_Wuhan-Hu-1_Strep: WOO-6_Wuhan-Hu-1_Strep
     WOO-6_BA.1_Strep: WOO-6_BA.1_Strep
     WOO-6_BA.1_FLAG: WOO-6_BA.1_FLAG
-  plot_auto_identified_sites: sensitive_max_mut
+  plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
   exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
+  site_color_scheme: BA1_mutated
   color_by_dms: False
   make_supp_data: False
   dmslogo_facet_plot_kwargs:
@@ -122,98 +122,46 @@ WOO-6_all:
     axisfontscale: 1.5
   hide_wt_identity: True
 
-WOO_BA1_FLAG:
+WOO-5_BA1:
   conditions:
-    WOO-3_BA.1_FLAG: WOO-3_BA.1_FLAG
-    WOO-4_BA.1_FLAG: WOO-4_BA.1_FLAG
-    WOO-5_BA.1_FLAG: WOO-5_BA.1_FLAG
-    WOO-6_BA.1_FLAG: WOO-6_BA.1_FLAG
-  plot_auto_identified_sites: sensitive_max_mut
+    WOO-5_BA.1_Strep: WOO-5 StrepTag (OAS) antibodies
+    WOO-5_BA.1_FLAG: WOO-5 FLAG (newly elicited) antibodies
+  plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
   exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
+  site_color_scheme: BA1_mutated
   color_by_dms: False
   make_supp_data: False
   dmslogo_facet_plot_kwargs:
     height_per_ax: 2.0
-  dmslogo_draw_line_kwargs:
-    widthscale: 0.5
-    axisfontscale: 1.5
+  draw_line_plot: False
   dmslogo_draw_logo_kwargs:
     widthscale: 0.75
     axisfontscale: 1.5
+  hide_wt_identity: True
 
-WOO_BA1_Strep:
+WOO-6_BA1:
   conditions:
-    WOO-3_BA.1_Strep: WOO-3_BA.1_Strep
-    WOO-4_BA.1_Strep: WOO-4_BA.1_Strep
-    WOO-5_BA.1_Strep: WOO-5_BA.1_Strep
-    WOO-6_BA.1_Strep: WOO-6_BA.1_Strep
-  plot_auto_identified_sites: sensitive_max_mut
+    WOO-6_BA.1_Strep: WOO-6 StrepTag (OAS) antibodies
+    WOO-6_BA.1_FLAG: WOO-6 FLAG (newly elicited) antibodies
+  plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
   exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
-  color_by_dms: False
-  make_supp_data: True
-  dmslogo_facet_plot_kwargs:
-    height_per_ax: 2.0
-  dmslogo_draw_line_kwargs:
-    widthscale: 0.5
-    axisfontscale: 1.5
-  dmslogo_draw_logo_kwargs:
-    widthscale: 0.75
-    axisfontscale: 1.5
-
-Wuhan1_Strep:
-  conditions:
-    WWW-1_Wuhan-Hu-1_Strep: WWW-1_Wuhan-Hu-1_Strep
-    WWW-2_Wuhan-Hu-1_Strep: WWW-2_Wuhan-Hu-1_Strep
-    WOO-3_Wuhan-Hu-1_Strep: WOO-3_Wuhan-Hu-1_Strep
-    WOO-4_Wuhan-Hu-1_Strep: WOO-4_Wuhan-Hu-1_Strep
-    WOO-5_Wuhan-Hu-1_Strep: WOO-5_Wuhan-Hu-1_Strep
-    WOO-6_Wuhan-Hu-1_Strep: WOO-6_Wuhan-Hu-1_Strep
-  plot_auto_identified_sites: sensitive_max_mut
-  #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
-  add_sites: []
-  exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
-  color_by_dms: False
-  make_supp_data: True
-  dmslogo_facet_plot_kwargs:
-    height_per_ax: 2.0
-  dmslogo_draw_line_kwargs:
-    widthscale: 0.5
-    axisfontscale: 1.5
-  dmslogo_draw_logo_kwargs:
-    widthscale: 0.75
-    axisfontscale: 1.5
-
-WWW_Wuhan1_Strep:
-  conditions:
-    WWW-1_Wuhan-Hu-1_Strep: WWW-1_Wuhan-Hu-1_Strep
-    WWW-2_Wuhan-Hu-1_Strep: WWW-2_Wuhan-Hu-1_Strep
-  plot_auto_identified_sites: sensitive_max_mut
-  #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
-  add_sites: []
-  exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
+  site_color_scheme: BA1_mutated
   color_by_dms: False
   make_supp_data: False
   dmslogo_facet_plot_kwargs:
     height_per_ax: 2.0
-  dmslogo_draw_line_kwargs:
-    widthscale: 0.5
-    axisfontscale: 1.5
+  draw_line_plot: False
   dmslogo_draw_logo_kwargs:
     widthscale: 0.75
     axisfontscale: 1.5
+  hide_wt_identity: True
 
 all:
   conditions:
-    WWW-1_Wuhan-Hu-1_Strep: WWW-1_Wuhan-Hu-1_Strep
-    WWW-2_Wuhan-Hu-1_Strep: WWW-2_Wuhan-Hu-1_Strep
     WOO-3_Wuhan-Hu-1_Strep: WOO-3_Wuhan-Hu-1_Strep
     WOO-3_BA.1_Strep: WOO-3_BA.1_Strep
     WOO-3_BA.1_FLAG: WOO-3_BA.1_FLAG
@@ -226,11 +174,11 @@ all:
     WOO-6_Wuhan-Hu-1_Strep: WOO-6_Wuhan-Hu-1_Strep
     WOO-6_BA.1_Strep: WOO-6_BA.1_Strep
     WOO-6_BA.1_FLAG: WOO-6_BA.1_FLAG
-  plot_auto_identified_sites: sensitive_max_mut
+  plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
   exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
+  site_color_scheme: BA1_mutated
   color_by_dms: False
   make_supp_data: True
   dmslogo_facet_plot_kwargs:
