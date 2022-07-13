@@ -16,6 +16,15 @@ import pandas as pd
 from plotnine import *
 
 import yaml
+
+import warnings
+```
+
+Ignore warnings that clutter output:
+
+
+```python
+warnings.simplefilter('ignore')
 ```
 
 Read the configuration file:
@@ -216,42 +225,21 @@ for var, is_reference, lower_clip, upper_clip, desired_min in [
     plt.close(fig)
 ```
 
-    /loc/scratch/62089035/ipykernel_32742/1580948032.py:14: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-
-
 
     
-![png](counts_to_cells_ratio_files/counts_to_cells_ratio_11_1.png)
+![png](counts_to_cells_ratio_files/counts_to_cells_ratio_13_0.png)
     
-
-
-    /loc/scratch/62089035/ipykernel_32742/1580948032.py:14: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 
 
 
     
-![png](counts_to_cells_ratio_files/counts_to_cells_ratio_11_3.png)
+![png](counts_to_cells_ratio_files/counts_to_cells_ratio_13_1.png)
     
-
-
-    /loc/scratch/62089035/ipykernel_32742/1580948032.py:14: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 
 
 
     
-![png](counts_to_cells_ratio_files/counts_to_cells_ratio_11_5.png)
+![png](counts_to_cells_ratio_files/counts_to_cells_ratio_13_2.png)
     
 
 

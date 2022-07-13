@@ -1,4 +1,4 @@
-name: SARS-CoV-2-RBD_B.1.351
+name:
 channels:
   - bioconda
   - conda-forge
@@ -21,7 +21,7 @@ dependencies:
   - snakemake=6.2.1
   - sra-tools=2.10.9
   - pip:
-    - dms-variants==0.8.10
+    - dms-variants==1.4.0
     - dmslogo==0.6.2
     - openpyxl
     - pdb_prot_align
