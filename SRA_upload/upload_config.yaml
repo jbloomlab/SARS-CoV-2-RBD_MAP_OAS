@@ -1,0 +1,15 @@
+# the BioSample accession
+biosample_accession: SAMN30086726
+
+# name of CSV file listing barcode runs to uploade
+barcode_runs: barcode_runs_OAS.csv
+
+#
+sample_name: Victora_OAS_MAP_barcodes
+
+# the following come from the SRA FTP upload instructions
+ftp_username: subftp
+ftp_account_folder: uploads/agreaney_uw.edu_hNzBp9b0
+
+# Meaningful name for this sample's FTP folder:
+ftp_subfolder: Victora_OAS_MAP_barcodes
