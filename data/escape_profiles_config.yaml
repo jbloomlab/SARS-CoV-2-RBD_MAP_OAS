@@ -36,9 +36,9 @@
 
 WOO-3_all:
   conditions:
-    WOO-3_Wuhan-Hu-1_Strep: WOO-3_Wuhan-Hu-1_Strep
-    WOO-3_BA.1_Strep: WOO-3_BA.1_Strep
-    WOO-3_BA.1_FLAG: WOO-3_BA.1_FLAG
+    WOO-3_Wuhan-Hu-1_Strep: Mouse 1 x Wuhan-Hu-1 libs x Strep Abs
+    WOO-3_BA.1_Strep: Mouse 1 x BA.1 libs x Strep Abs
+    WOO-3_BA.1_FLAG: Mouse 1 x BA.1 libs x FLAG Abs
   plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
@@ -58,9 +58,9 @@ WOO-3_all:
 
 WOO-4_all:
   conditions:
-    WOO-4_Wuhan-Hu-1_Strep: WOO-4_Wuhan-Hu-1_Strep
-    WOO-4_BA.1_Strep: WOO-4_BA.1_Strep
-    WOO-4_BA.1_FLAG: WOO-4_BA.1_FLAG
+    WOO-4_Wuhan-Hu-1_Strep: Mouse 4 x Wuhan-Hu-1 libs x Strep Abs
+    WOO-4_BA.1_Strep: Mouse 4 x BA.1 libs x Strep Abs
+    WOO-4_BA.1_FLAG: Mouse 4 x BA.1 libs x FLAG Abs
   plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
@@ -80,9 +80,9 @@ WOO-4_all:
 
 WOO-5_all:
   conditions:
-    WOO-5_Wuhan-Hu-1_Strep: WOO-5_Wuhan-Hu-1_Strep
-    WOO-5_BA.1_Strep: WOO-5_BA.1_Strep
-    WOO-5_BA.1_FLAG: WOO-5_BA.1_FLAG
+    WOO-5_Wuhan-Hu-1_Strep: Mouse 3 x Wuhan-Hu-1 libs x Strep Abs
+    WOO-5_BA.1_Strep: Mouse 3 x BA.1 libs x Strep Abs
+    WOO-5_BA.1_FLAG: Mouse 3 x BA.1 libs x FLAG Abs
   plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
@@ -102,9 +102,9 @@ WOO-5_all:
 
 WOO-6_all:
   conditions:
-    WOO-6_Wuhan-Hu-1_Strep: WOO-6_Wuhan-Hu-1_Strep
-    WOO-6_BA.1_Strep: WOO-6_BA.1_Strep
-    WOO-6_BA.1_FLAG: WOO-6_BA.1_FLAG
+    WOO-6_Wuhan-Hu-1_Strep: Mouse 2 x Wuhan-Hu-1 libs x Strep Abs
+    WOO-6_BA.1_Strep: Mouse 2 x BA.1 libs x Strep Abs
+    WOO-6_BA.1_FLAG: Mouse 2 x BA.1 libs x FLAG Abs
   plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
@@ -124,8 +124,8 @@ WOO-6_all:
 
 WOO-5_BA1:
   conditions:
-    WOO-5_BA.1_Strep: WOO-5 StrepTag (OAS) antibodies
-    WOO-5_BA.1_FLAG: WOO-5 FLAG (newly elicited) antibodies
+    WOO-5_BA.1_Strep: Mouse 3 StrepTag (OAS) antibodies
+    WOO-5_BA.1_FLAG: Mouse 3 FLAG (newly elicited) antibodies
   plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
@@ -143,8 +143,8 @@ WOO-5_BA1:
 
 WOO-6_BA1:
   conditions:
-    WOO-6_BA.1_Strep: WOO-6 StrepTag (OAS) antibodies
-    WOO-6_BA.1_FLAG: WOO-6 FLAG (newly elicited) antibodies
+    WOO-6_BA.1_Strep: Mouse 2 StrepTag (OAS) antibodies
+    WOO-6_BA.1_FLAG: Mouse 2 FLAG (newly elicited) antibodies
   plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
@@ -162,18 +162,18 @@ WOO-6_BA1:
 
 all:
   conditions:
-    WOO-3_Wuhan-Hu-1_Strep: WOO-3_Wuhan-Hu-1_Strep
-    WOO-3_BA.1_Strep: WOO-3_BA.1_Strep
-    WOO-3_BA.1_FLAG: WOO-3_BA.1_FLAG
-    WOO-4_Wuhan-Hu-1_Strep: WOO-4_Wuhan-Hu-1_Strep
-    WOO-4_BA.1_Strep: WOO-4_BA.1_Strep
-    WOO-4_BA.1_FLAG: WOO-4_BA.1_FLAG
-    WOO-5_Wuhan-Hu-1_Strep: WOO-5_Wuhan-Hu-1_Strep
-    WOO-5_BA.1_Strep: WOO-5_BA.1_Strep
-    WOO-5_BA.1_FLAG: WOO-5_BA.1_FLAG
-    WOO-6_Wuhan-Hu-1_Strep: WOO-6_Wuhan-Hu-1_Strep
-    WOO-6_BA.1_Strep: WOO-6_BA.1_Strep
-    WOO-6_BA.1_FLAG: WOO-6_BA.1_FLAG
+    WOO-3_Wuhan-Hu-1_Strep: Mouse 1 x Wuhan-Hu-1 libs x Strep Abs
+    WOO-3_BA.1_Strep: Mouse 1 x BA.1 libs x Strep Abs
+    WOO-3_BA.1_FLAG: Mouse 1 x Wuhan-Hu-1 libs x FLAG Abs
+    WOO-6_Wuhan-Hu-1_Strep: Mouse 2 x Wuhan-Hu-1 libs x Strep Abs
+    WOO-6_BA.1_Strep: Mouse 2 x BA.1 libs x Strep Abs
+    WOO-6_BA.1_FLAG: Mouse 2 x Wuhan-Hu-1 libs x FLAG Abs
+    WOO-5_Wuhan-Hu-1_Strep: Mouse 3 x Wuhan-Hu-1 libs x Strep Abs
+    WOO-5_BA.1_Strep: Mouse 3 x BA.1 libs x Strep Abs
+    WOO-5_BA.1_FLAG: Mouse 3 x Wuhan-Hu-1 libs x FLAG Abs
+    WOO-4_Wuhan-Hu-1_Strep: Mouse 4 x Wuhan-Hu-1 libs x Strep Abs
+    WOO-4_BA.1_Strep: Mouse 4 x BA.1 libs x Strep Abs
+    WOO-4_BA.1_FLAG: Mouse 4 x BA.1 libs x FLAG Abs
   plot_auto_identified_sites: sensitive
   #add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   add_sites: []
